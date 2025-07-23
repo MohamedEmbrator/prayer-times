@@ -10,7 +10,7 @@ html {
 }
 section {
   background-color: #a54f3a87;
-  background-image: url("/assets/images/bg.jpg");
+  background-image: url("./assets/images/bg.jpg");;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
