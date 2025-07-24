@@ -33,9 +33,10 @@ function App() {
   useEffect(() => {
     const fetchPrayerTimes = async () => {
       try {
-        const response = await fetch(`https://api.aladhan.com/v1/timingsByCity/23-07-2025?city=${city}&country=egypt&method=8`);
+        const response = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=${city}&country=egypt&method=8`);
         const response_data = await response.json();
         setPrayerTimes(response_data.data.timings);
+        console.log(response_data.data.date.hijri);
         setDate(response_data.data.date.hijri)
       } catch (error) { 
         console.error(error);
